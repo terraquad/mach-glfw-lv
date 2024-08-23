@@ -30,9 +30,7 @@ pub fn build(b: *std.Build) !void {
         main_tests.linkLibrary(dep.artifact("glfw"));
         @import("glfw").addPaths(&main_tests.root_module);
     }
-}
 
-comptime {
     const supported_zig = std.SemanticVersion.parse("0.13.0") catch unreachable;
     if (builtin.zig_version.order(supported_zig) != .eq) {
         std.log.warn(
