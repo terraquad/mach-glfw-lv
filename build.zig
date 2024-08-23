@@ -35,9 +35,9 @@ pub fn build(b: *std.Build) !void {
 comptime {
     const supported_zig = std.SemanticVersion.parse("0.13.0") catch unreachable;
     if (builtin.zig_version.order(supported_zig) != .eq) {
-        @compileLog(std.fmt.comptimePrint(
+        std.log.warn(
             \\This version of mach-glfw targets Zig version {}, but you are currently using {}.
             \\If you experience bugs, please don't report them unless you can reproduce them with the targeted version.
-            , .{supported_zig, builtin.zig_version}));
+            , .{supported_zig, builtin.zig_version});
     }
 }
