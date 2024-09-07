@@ -1,6 +1,6 @@
 # mach-glfw master
 
-This is a fork of [mach-glfw](https://github.com/slimsag/mach-glfw), but instead of targeting nominated Mach Zig versions, this one targets Zig master.
+This is a fork of [mach-glfw](https://github.com/slimsag/mach-glfw), but instead of targeting nominated Mach Zig versions, this one targets the Zig master branch.
 
 ## Usage
 
